@@ -31,6 +31,7 @@ let DBC = {
     host: "localhost",
     user: "root",
     password: "",
+    database: "nodejs_first"
 }
 
 let DBConnect = mysql.createConnection(DBC);
@@ -40,5 +41,19 @@ DBConnect.connect(function (error) {
         console.log("Connection Fail");
     } else {
         console.log("Connection Success !!!")
+        InsertData(DBConnect);
     }
 })
+
+function InsertData(DBConnect) {
+
+    let SQL_QUERY = "INSERT INTO `students_list`(`name`, `roll`, `class`, `phone`, `city`) " +
+        "VALUES ('Sourav','1234','Ten','171111100','Dhaka')";
+    DBConnect.query(SQL_QUERY, function (error) {
+        if (error) {
+            console.log("Data Insert Error");
+        } else {
+            console.log("Data Insert Success !!");
+        }
+    })
+}
