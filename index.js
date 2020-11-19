@@ -42,7 +42,8 @@ DBConnect.connect(function (error) {
     } else {
         console.log("Connection Success !!!")
         // InsertData(DBConnect);
-        DeleteData(DBConnect);
+        // DeleteData(DBConnect);
+        UpdateData(DBConnect);
     }
 })
 
@@ -59,14 +60,25 @@ DBConnect.connect(function (error) {
 //     })
 // }
 
-function DeleteData(DBCheck) {
-    let DeleteQuery = "DELETE FROM `students_list` WHERE `roll`='123456'";
-    DBCheck.query(DeleteQuery, function (error) {
+// function DeleteData(DBCheck) {
+//     let DeleteQuery = "DELETE FROM `students_list` WHERE `roll`='123456'";
+//     DBCheck.query(DeleteQuery, function (error) {
+//         if (error) {
+//             console.log('Data Not Delete');
+//         } else {
+//             console.log('Data Delete !!!');
+//         }
+//     })
+//
+// }
+
+function UpdateData(DBCheck) {
+    let UpdateQuery = "UPDATE `students_list` SET `name`='Sourav Roy', `phone`='0188223344',`city`='Dinajpur' WHERE `roll`='12'";
+    DBCheck.query(UpdateQuery, function (error) {
         if (error) {
-            console.log('Data Not Delete');
+            console.log('Data Not Update');
         } else {
-            console.log('Data Delete !!!');
+            console.log('Data Update Successfully !!!');
         }
     })
-
 }
