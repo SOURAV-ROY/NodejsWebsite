@@ -41,19 +41,32 @@ DBConnect.connect(function (error) {
         console.log("Connection Fail");
     } else {
         console.log("Connection Success !!!")
-        InsertData(DBConnect);
+        // InsertData(DBConnect);
+        DeleteData(DBConnect);
     }
 })
 
-function InsertData(DBConnect) {
+// function InsertData(DBConnect) {
+//
+//     let SQL_QUERY = "INSERT INTO `students_list`(`name`, `roll`, `class`, `phone`, `city`) " +
+//         "VALUES ('Sourav','123456','Ten','171111100','Dhaka')";
+//     DBConnect.query(SQL_QUERY, function (error) {
+//         if (error) {
+//             console.log("Data Insert Error");
+//         } else {
+//             console.log("Data Insert Success !!");
+//         }
+//     })
+// }
 
-    let SQL_QUERY = "INSERT INTO `students_list`(`name`, `roll`, `class`, `phone`, `city`) " +
-        "VALUES ('Sourav','1234','Ten','171111100','Dhaka')";
-    DBConnect.query(SQL_QUERY, function (error) {
+function DeleteData(DBCheck) {
+    let DeleteQuery = "DELETE FROM `students_list` WHERE `roll`='123456'";
+    DBCheck.query(DeleteQuery, function (error) {
         if (error) {
-            console.log("Data Insert Error");
+            console.log('Data Not Delete');
         } else {
-            console.log("Data Insert Success !!");
+            console.log('Data Delete !!!');
         }
     })
+
 }

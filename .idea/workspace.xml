@@ -35,6 +35,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -66,7 +67,9 @@
       <workItem from="1605453409239" duration="113000" />
       <workItem from="1605453572066" duration="983000" />
       <workItem from="1605591417101" duration="640000" />
-      <workItem from="1605592218754" duration="6370000" />
+      <workItem from="1605592218754" duration="6569000" />
+      <workItem from="1605761396481" duration="714000" />
+      <workItem from="1605763109282" duration="1315000" />
     </task>
     <servers />
   </component>
@@ -78,6 +81,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="60" y="225" key="#SQL_Dialects/0.0.1366.768@0.0.1366.768" timestamp="1605604867457" />
+    <state x="275" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605604900397">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1605604900397" />
     <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1605453544321">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
