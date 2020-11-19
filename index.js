@@ -43,7 +43,8 @@ DBConnect.connect(function (error) {
         console.log("Connection Success !!!")
         // InsertData(DBConnect);
         // DeleteData(DBConnect);
-        UpdateData(DBConnect);
+        // UpdateData(DBConnect);
+        SelectData(DBConnect);
     }
 })
 
@@ -72,13 +73,24 @@ DBConnect.connect(function (error) {
 //
 // }
 
-function UpdateData(DBCheck) {
-    let UpdateQuery = "UPDATE `students_list` SET `name`='Sourav Roy', `phone`='0188223344',`city`='Dinajpur' WHERE `roll`='12'";
-    DBCheck.query(UpdateQuery, function (error) {
+// function UpdateData(DBCheck) {
+//     let UpdateQuery = "UPDATE `students_list` SET `name`='Sourav Roy', `phone`='0188223344',`city`='Dinajpur' WHERE `roll`='12'";
+//     DBCheck.query(UpdateQuery, function (error) {
+//         if (error) {
+//             console.log('Data Not Update');
+//         } else {
+//             console.log('Data Update Successfully !!!');
+//         }
+//     })
+// }
+
+function SelectData(DBCheck) {
+    let SelectQuery = "SELECT * FROM `students_list`"
+    DBCheck.query(SelectQuery, function (error, result) {
         if (error) {
-            console.log('Data Not Update');
+            console.log('Data Not Select ');
         } else {
-            console.log('Data Update Successfully !!!');
+            console.log(result);
         }
     })
 }
